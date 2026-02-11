@@ -3,5 +3,6 @@ module.exports = {
     require: ['tests/step-definitions/*.js', 'tests/support/*.js'],
     format: ['progress', 'json:reports/cucumber-report.json'],
     publish: true,
+    parallel: 3
   },
 };

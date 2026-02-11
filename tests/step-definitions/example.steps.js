@@ -59,3 +59,17 @@ Then('Validate the program is created', async function () {
   await expect(toastSpans).toHaveText('Program added successfully !');
   await expect(toastSpans).toHaveCount(0);
 });
+
+Given('Go to job Page', async function () {
+  await this.page.goto('/employer/jobs-page')
+  await this.page.locator("//a[@id='menuReviews' and normalize-space(text())='Jobs']").click()
+  await this.page.locator("//a[@id='menuReviews' and normalize-space(text())='Add New Job']").click()
+})
+
+When('select a program', async function () {
+  await this.page.locator('(//input[@class="ant-select-selection-search-input"])[2]').click()
+  await this.page.locator("(//div[contains(@class, 'ant-select-tree-treenode')]//span[.='2 Feb 2026 Program'])[3]").click()
+  await this.page.locator("//button[@type='button' ] /span[normalize-space(text())='OK']").click()
+  await this.page.locator("//img[@src='/static/media/settingIcon.1290d7c0.svg']").click()
+})
+

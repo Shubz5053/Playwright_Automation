@@ -11,3 +11,8 @@ Feature: Login Feature
     When enter a program Details
     When clicks on save and continue button
     Then Validate the program is created
+
+  Scenario: Create a job
+    Given Go to job Page
+    When select a program
+

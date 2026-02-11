@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 590217900
+              "duration": 1656165499
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 4,
             "name": "Go to Career Equity Website",
             "match": {
-              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:17"
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:17"
             },
             "result": {
               "status": "passed",
-              "duration": 1527872199
+              "duration": 3338101500
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 5,
             "name": "User enters valid credentials",
             "match": {
-              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:21"
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:21"
             },
             "result": {
               "status": "passed",
-              "duration": 6697340199
+              "duration": 7890032399
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "User should be logged in successfully",
             "match": {
-              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:31"
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 11721900
+              "duration": 136777499
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 290427899
+              "duration": 597590700
             }
           }
         ],
@@ -80,7 +80,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 514637399
+              "duration": 2047692900
             }
           },
           {
@@ -89,11 +89,11 @@
             "line": 9,
             "name": "Go to program Page",
             "match": {
-              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:35"
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 3117374199
+              "duration": 5705644598
             }
           },
           {
@@ -102,11 +102,11 @@
             "line": 10,
             "name": "clicks on Add Program Page",
             "match": {
-              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:40"
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:40"
             },
             "result": {
               "status": "passed",
-              "duration": 94332699
+              "duration": 763046799
             }
           },
           {
@@ -115,12 +115,11 @@
             "line": 11,
             "name": "enter a program Details",
             "match": {
-              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:44"
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:44"
             },
             "result": {
-              "status": "failed",
-              "duration": 30254982399,
-              "error_message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('int[id=\"programDateRange\"]')\u001b[22m\n\n    at CustomWorld.<anonymous> (D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:46:57)"
+              "status": "passed",
+              "duration": 2035503700
             }
           },
           {
@@ -129,11 +128,11 @@
             "line": 12,
             "name": "clicks on save and continue button",
             "match": {
-              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:53"
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:53"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 252808798
             }
           },
           {
@@ -142,11 +141,11 @@
             "line": 13,
             "name": "Validate the program is created",
             "match": {
-              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:57"
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:57"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 4397414500
             }
           },
           {
@@ -154,7 +153,60 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 273185900
+              "duration": 523302999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;create-a-job",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Create a job",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1638607700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "Go to job Page",
+            "match": {
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5512332399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "select a program",
+            "match": {
+              "location": "file:\\D:\\Playwright\\Playwright_Automation\\tests\\step-definitions\\example.steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2012255498
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4144219699
             }
           }
         ],
