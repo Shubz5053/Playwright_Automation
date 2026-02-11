@@ -1,26 +1,21 @@
 {
-  "name": "playwright_automation",
+  "name": "playwrightcucumber",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "bdd:run": "npx rimraf .features-gen && npx playwright-bdd && npx playwright test --headed && npx playwright show-report"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Shubz5053/Playwright_Automation.git"
+    "bdd:run": "cucumber-js tests/features/**/*.feature"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Shubz5053/Playwright_Automation/issues"
-  },
-  "homepage": "https://github.com/Shubz5053/Playwright_Automation#readme",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.2.3",
-    "playwright-bdd": "^8.4.2",
-    "rimraf": "^6.1.2"
+    "chai": "^6.2.2",
+    "multiple-cucumber-html-reporter": "^3.9.3"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.6.0"
   }
 }

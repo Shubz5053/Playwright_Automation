@@ -1,0 +1,172 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-feature;verify-user-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify user login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 590217900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Go to Career Equity Website",
+            "match": {
+              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1527872199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User enters valid credentials",
+            "match": {
+              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6697340199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "User should be logged in successfully",
+            "match": {
+              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11721900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 290427899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-feature;create-program",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Create Program",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 514637399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "Go to program Page",
+            "match": {
+              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3117374199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "clicks on Add Program Page",
+            "match": {
+              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94332699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "enter a program Details",
+            "match": {
+              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:44"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30254982399,
+              "error_message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('int[id=\"programDateRange\"]')\u001b[22m\n\n    at CustomWorld.<anonymous> (D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:46:57)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "clicks on save and continue button",
+            "match": {
+              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:53"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Validate the program is created",
+            "match": {
+              "location": "file:\\D:\\playwrightcucumber\\tests\\step-definitions\\example.steps.js:57"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 273185900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login Feature",
+    "tags": [],
+    "uri": "tests\\features\\example.feature"
+  }
+]
