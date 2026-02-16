@@ -42,7 +42,7 @@ When('clicks on Add Program Page', async function () {
 });
 
 When('enter a program Details', async function () {
-  await this.page.locator('input[id="proAddEditName"]').fill("Program ID :12345");
+  await this.page.locator('input[id="proAddEditName"]').fill("New Program ID : 2154");
   await this.page.locator('input[id="programDateRange"]').click();
   await this.page.locator('td[title="2026-02-11"]').click();
   await this.page.locator('td[title="2026-03-18"]').click();
