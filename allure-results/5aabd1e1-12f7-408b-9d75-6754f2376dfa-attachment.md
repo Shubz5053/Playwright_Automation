@@ -1,0 +1,1381 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: auth.setup.ts >> login with valid user
+- Location: src\tests\auth.setup.ts:12:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.waitForURL: Test timeout of 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "/mnjuser/profile" until "load"
+  navigated to "https://www.naukri.com/mnjuser/homepage"
+  navigated to "https://www.naukri.com/mnjuser/homepage"
+============================================================
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - img
+  - img
+  - generic [ref=e4]:
+    - link "Naukri Logo" [ref=e5] [cursor=pointer]:
+      - /url: https://www.naukri.com
+      - img "Naukri Logo" [ref=e6]
+    - navigation:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Jobs 2" [ref=e9] [cursor=pointer]:
+            - /url: /mnjuser/recommendedjobs
+            - generic [ref=e10]: Jobs
+            - generic [ref=e11]: "2"
+          - generic:
+            - list:
+              - listitem:
+                - link "Recommended jobs":
+                  - /url: /mnjuser/recommendedjobs
+                  - generic:
+                    - generic:
+                      - generic: Recommended jobs
+              - listitem:
+                - link "NVites 2 New":
+                  - /url: /mnjuser/inbox
+                  - generic:
+                    - generic:
+                      - generic: NVites
+                  - generic "2 New"
+              - listitem:
+                - link "Application status 207 Updates":
+                  - /url: /myapply/historypage
+                  - generic:
+                    - generic:
+                      - generic: Application status
+                  - generic "207 Updates"
+              - listitem:
+                - link "Saved jobs":
+                  - /url: /mnjuser/savedjobs
+                  - generic:
+                    - generic:
+                      - generic: Saved jobs
+        - listitem [ref=e12]:
+          - link "Companies" [ref=e13] [cursor=pointer]:
+            - /url: https://www.naukri.com/companies-hiring-in-india?src=gnbCompanies_homepage_srch
+            - generic [ref=e14]: Companies
+          - generic:
+            - list:
+              - listitem:
+                - generic: Explore categories
+              - listitem:
+                - link "Unicorn":
+                  - /url: https://www.naukri.com/unicorn-companies-in-india-cat102?title=Unicorns%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Unicorn
+              - listitem:
+                - link "MNC":
+                  - /url: https://www.naukri.com/mnc-companies-in-india-cat101?title=MNCs%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: MNC
+              - listitem:
+                - link "Startup":
+                  - /url: https://www.naukri.com/startup-companies-in-india-cat103?title=Startups%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Startup
+              - listitem:
+                - link "Product based":
+                  - /url: https://www.naukri.com/product-companies-in-india-cat106?title=Product%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Product based
+              - listitem:
+                - link "Internet":
+                  - /url: https://www.naukri.com/internet-companies-in-india-cat105?title=Internet%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Internet
+            - list:
+              - listitem:
+                - generic: Explore collections
+              - listitem:
+                - link "Top companies":
+                  - /url: https://www.naukri.com/companies-hiring-in-india?src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Top companies
+              - listitem:
+                - link "IT companies":
+                  - /url: https://www.naukri.com/it-companies-in-india-cat116?src=gnbCompanies_homepage_srch&title=IT%20Companies%20Hiring
+                  - generic:
+                    - generic:
+                      - generic: IT companies
+              - listitem:
+                - link "Fintech companies":
+                  - /url: https://www.naukri.com/fintech-and-payments-companies-in-india-cat108?title=Fintech%20%26%20Payments%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Fintech companies
+              - listitem:
+                - link "Sponsored companies":
+                  - /url: https://www.naukri.com/allcompanies?searchType=standardLogo&title=Sponsored+companies&branding=%257B%2522pagename%2522%253A%2522ni-desktop-standard-viewAll%2522%257D&pageNo=1&qcount=47&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Sponsored companies
+              - listitem:
+                - link "Featured companies":
+                  - /url: https://www.naukri.com/allcompanies?searchType=premiumLogo&title=Featured+companies+actively+hiring&branding=%257B%2522pagename%2522%253A%2522ni-desktop-premium-viewAll%2522%257D&pageNo=1&qcount=47&src=gnbCompanies_homepage_srch
+                  - generic:
+                    - generic:
+                      - generic: Featured companies
+            - list:
+              - listitem:
+                - generic:
+                  - text: Research companies
+                  - generic: by
+                  - img
+                  - generic: Ambitionbox
+              - listitem:
+                - link "Interview questions":
+                  - /url: https://www.ambitionbox.com/interviews?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+                  - generic:
+                    - generic:
+                      - generic: Interview questions
+              - listitem:
+                - link "Company salaries":
+                  - /url: https://www.ambitionbox.com/salaries?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+                  - generic:
+                    - generic:
+                      - generic: Company salaries
+              - listitem:
+                - link "Company reviews":
+                  - /url: https://www.ambitionbox.com/reviews?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+                  - generic:
+                    - generic:
+                      - generic: Company reviews
+              - listitem:
+                - link "Salary Calculator":
+                  - /url: https://www.ambitionbox.com/salaries/take-home-salary-calculator?utm_campaign=gnb&utm_source=naukri&utm_medium=desktop
+                  - generic:
+                    - generic:
+                      - generic: Salary Calculator
+        - listitem [ref=e15]:
+          - link "Services 1" [ref=e16] [cursor=pointer]:
+            - /url: https://resume.naukri.com/?fftid=100001
+            - generic [ref=e17]: Services
+            - generic [ref=e18]: "1"
+          - generic:
+            - list:
+              - listitem:
+                - generic: Resume writing
+              - listitem:
+                - link "Text resume":
+                  - /url: https://resume.naukri.com/resume-writing-services?fftid=101001
+                  - generic:
+                    - generic:
+                      - generic: Text resume
+              - listitem:
+                - link "Visual resume":
+                  - /url: https://resume.naukri.com/visual-resume-writing-services?fftid=101002
+                  - generic:
+                    - generic:
+                      - generic: Visual resume
+              - listitem:
+                - link "Resume critique":
+                  - /url: https://resume.naukri.com/resume-critique?fftid=101006
+                  - generic:
+                    - generic:
+                      - generic: Resume critique
+              - listitem:
+                - generic: Find Jobs
+              - listitem:
+                - link "Jobs4u":
+                  - /url: https://resume.naukri.com/job-alerts-on-mobile-mail?fftid=101011#jobmail
+                  - generic:
+                    - generic:
+                      - generic: Jobs4u
+              - listitem:
+                - link "Priority applicant":
+                  - /url: https://resume.naukri.com/priority-job-application?fftid=101019
+                  - generic:
+                    - generic:
+                      - generic: Priority applicant
+              - listitem:
+                - link "Contact us":
+                  - /url: https://resume.naukri.com/contact-us?fftid=101015
+                  - generic:
+                    - generic:
+                      - generic: Contact us
+            - list:
+              - listitem:
+                - generic: Get recruiter's attention
+              - listitem:
+                - link "Resume display":
+                  - /url: https://resume.naukri.com/resume-display?fftid=101009
+                  - generic:
+                    - generic:
+                      - generic: Resume display
+              - listitem:
+                - generic: Interview Preparation
+              - listitem:
+                - link "AI Mock Interview":
+                  - /url: https://www.naukri.com/ai-interview-questions?fftid=NaukriGNBAIInterview
+                  - generic:
+                    - generic:
+                      - generic: AI Mock Interview
+              - listitem:
+                - generic: Monthly subscriptions
+              - listitem:
+                - link "Basic & premium plans":
+                  - /url: https://resume.naukri.com/subscription-product?fftid=101025
+                  - generic:
+                    - generic:
+                      - generic: Basic & premium plans
+            - list:
+              - listitem:
+                - generic: Free resume resources
+              - listitem:
+                - link "Resume maker":
+                  - /url: https://www.naukri.com/resume-maker?utmTerm=ResumePro_Gnb&utmContent=gnbServices
+                  - generic:
+                    - generic:
+                      - generic: Resume maker
+              - listitem:
+                - link "Resume quality score":
+                  - /url: https://resume.naukri.com/resume-quality-score?fftid=101003
+                  - generic:
+                    - generic:
+                      - generic: Resume quality score
+              - listitem:
+                - link "Resume samples":
+                  - /url: https://resume.naukri.com/resume-samples?fftid=101004
+                  - generic:
+                    - generic:
+                      - generic: Resume samples
+              - listitem:
+                - link "Job letter samples":
+                  - /url: https://resume.naukri.com/job-letter-format
+                  - generic:
+                    - generic:
+                      - generic: Job letter samples
+              - listitem:
+                - generic: Promotional Offer
+              - listitem:
+                - link "FASTJOB20 20% off on services to help get more callbacks":
+                  - /url: https://resume.naukri.com/resume-display?fftid=notf_nauk_promo_rd
+                  - generic:
+                    - generic:
+                      - generic: FASTJOB20 20% off on services to help get more callbacks
+    - generic [ref=e19] [cursor=pointer]:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - textbox "Enter keyword / designation / companies"
+        - generic:
+          - generic:
+            - generic:
+              - textbox "Select experience"
+              - generic: 
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - textbox "Enter location"
+      - generic [ref=e20]: Search jobs here
+      - button "" [ref=e21]:
+        - generic [ref=e22]: 
+    - generic [ref=e23]:
+      - link "naukri360-pill naukri360-pill naukri360-pill naukri360-pill naukri360-pill naukri360-pill" [ref=e24] [cursor=pointer]:
+        - /url: /naukri360
+        - generic [ref=e25]:
+          - img "naukri360-pill" [ref=e27]
+          - img "naukri360-pill" [ref=e29]
+          - img "naukri360-pill" [ref=e31]
+          - img "naukri360-pill" [ref=e33]
+          - img "naukri360-pill" [ref=e35]
+          - img "naukri360-pill" [ref=e37]
+      - generic:
+        - list:
+          - listitem:
+            - link "Neo-AI Job Agent ":
+              - /url: https://www.naukri.com/job-apply-agent?utmTerm=JobAgent_gnb&utmContent=gnbV1
+              - generic:
+                - generic:
+                  - generic: Neo-AI Job Agent
+                - generic: 
+          - listitem:
+            - link "Naukri Pro ":
+              - /url: https://www.naukri.com/naukri360-pro?utm_term=N360Pro_gnb&utm_content=gnbV1
+              - generic:
+                - generic:
+                  - generic: Naukri Pro
+                - generic: 
+          - listitem:
+            - link "Resume Pro ":
+              - /url: https://www.naukri.com/resume-maker?utm_term=ResumePro_gnb&utm_content=gnbV1
+              - generic:
+                - generic:
+                  - generic: Resume Pro
+                - generic: 
+          - listitem:
+            - link "Resume Writing Service ":
+              - /url: https://www.naukri.com/resume-writing-service?utmTerm=resume_gnb&utmContent=gnbV1
+              - generic:
+                - generic:
+                  - generic: Resume Writing Service
+                - generic: 
+          - listitem:
+            - link "Interview Pro ":
+              - /url: https://www.naukri.com/mock-interview-questions?skipRole=true&utmTerm=InterviewPro_gnb&utmContent=gnbV1
+              - generic:
+                - generic:
+                  - generic: Interview Pro
+                - generic: 
+    - img "jobagent-pill" [ref=e40] [cursor=pointer]
+    - generic [ref=e42] [cursor=pointer]:
+      - generic [ref=e43]: 
+      - generic [ref=e44]: "9"
+    - generic [ref=e51] [cursor=pointer]:
+      - img "naukri user profile img" [ref=e52]
+      - generic [ref=e53]: "2"
+  - main [ref=e54]:
+    - generic [ref=e56]:
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - img [ref=e60]
+          - img "profile" [ref=e63]
+          - generic [ref=e64]: 100%
+        - generic "Shubham Balasaheb Sakhare" [ref=e66]
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic "SDET Automation Test Engineer" [ref=e69]
+            - generic "CanWill Technologies" [ref=e70]: "@ CanWill Technologies"
+          - paragraph [ref=e71]: Last updated today
+          - link "View profile" [ref=e73] [cursor=pointer]:
+            - /url: /mnjuser/profile
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - text: Profile performance
+            - img [ref=e76]
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - generic [ref=e79]: Search appearances
+              - link "989" [ref=e80] [cursor=pointer]:
+                - /url: /mnjuser/performance
+                - generic [ref=e81]: "989"
+                - img [ref=e83]
+            - generic [ref=e84]:
+              - generic [ref=e85]: Recruiter actions
+              - link "77" [ref=e86] [cursor=pointer]:
+                - /url: /mnjuser/performance#recruiterActions
+                - generic [ref=e87]: "77"
+                - img [ref=e89]
+          - generic [ref=e94]:
+            - img [ref=e95]
+            - paragraph [ref=e96]: Upto 3X boost to your profile performance
+            - link [ref=e97] [cursor=pointer]:
+              - /url: https://www.naukri.com/naukri360-pro?utmTerm=NPro_Dashboard&utmContent=leftSidebar
+            - img [ref=e98]
+        - list [ref=e99]:
+          - listitem [ref=e100] [cursor=pointer]:
+            - img [ref=e101]
+            - generic [ref=e102]: My home
+          - listitem [ref=e103] [cursor=pointer]:
+            - img [ref=e104]
+            - generic [ref=e105]: Jobs
+          - listitem [ref=e106] [cursor=pointer]:
+            - img [ref=e107]
+            - generic [ref=e108]: Companies
+          - listitem [ref=e109] [cursor=pointer]:
+            - img [ref=e110]
+            - generic [ref=e111]: Blogs
+      - generic [ref=e113]:
+        - generic [ref=e118] [cursor=pointer]:
+          - generic [ref=e119]:
+            - generic [ref=e120]: Shubham,
+            - generic [ref=e121]:
+              - text: you are
+              - generic [ref=e122]: missing out
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e127]:
+                - generic [ref=e128]: With
+                - generic [ref=e129]:
+                  - generic [ref=e130]: P
+                  - generic [ref=e131]: R
+                - generic [ref=e133]: you get hired faster
+              - generic [ref=e136]: Become a Pro
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e140]: What you will get
+                - generic [ref=e141]:
+                  - generic [ref=e143]: Hidden job invitations
+                  - generic [ref=e145]: AI-enhanced profile
+                  - generic [ref=e147]: Auto-Apply on Naukri
+              - generic [ref=e149]: You
+              - generic [ref=e156]:
+                - generic [ref=e157]: P
+                - generic [ref=e158]: R
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - text: Recommended jobs for you
+            - link "View all" [ref=e167] [cursor=pointer]:
+              - /url: /mnjuser/recommendedjobs
+          - generic [ref=e168]:
+            - generic [ref=e170]:
+              - generic [ref=e172] [cursor=pointer]: Profile (70)
+              - generic [ref=e175] [cursor=pointer]: Applies (58)
+              - generic [ref=e178] [cursor=pointer]: Preferences (70)
+              - generic [ref=e181] [cursor=pointer]: You might like (75)
+            - generic [ref=e183]:
+              - generic [ref=e185]:
+                - generic [ref=e189] [cursor=pointer]:
+                  - generic [ref=e190]:
+                    - img "Capgemini" [ref=e192]
+                    - generic [ref=e193]: 12h ago
+                  - generic [ref=e195]: Sdet Engineer
+                  - generic [ref=e197]:
+                    - generic [ref=e198]: Capgemini
+                    - generic [ref=e199]: "3.6"
+                  - generic [ref=e204]: Hybrid - Pune, Hyderabad
+                - generic [ref=e208] [cursor=pointer]:
+                  - generic [ref=e209]:
+                    - img "Thomson Reuters" [ref=e211]
+                    - generic [ref=e212]: 7d ago
+                  - generic [ref=e214]: Automation & AI Developer
+                  - generic [ref=e216]:
+                    - generic [ref=e217]: Thomson Reuters
+                    - generic [ref=e218]: "3.7"
+                  - generic [ref=e223]: Hybrid - Hyderabad, Bengaluru
+                - generic [ref=e227] [cursor=pointer]:
+                  - generic [ref=e228]:
+                    - img "Trigent Software." [ref=e230]
+                    - generic [ref=e231]: 7d ago
+                  - generic [ref=e233]: Technical Support Engineer _ Automation
+                  - generic [ref=e236]: Trigent Software.
+                  - generic [ref=e240]: Hyderabad
+                - generic [ref=e244] [cursor=pointer]:
+                  - generic [ref=e245]:
+                    - img "Trellix" [ref=e247]
+                    - generic [ref=e248]: 2d ago
+                  - generic [ref=e250]: SDET Automation Test Engineer
+                  - generic [ref=e252]:
+                    - generic [ref=e253]: Trellix
+                    - generic [ref=e254]: "3.5"
+                  - generic [ref=e259]: Bengaluru
+                - generic [ref=e263] [cursor=pointer]:
+                  - generic [ref=e264]:
+                    - img "Morningstar" [ref=e266]
+                    - generic [ref=e267]: 9d ago
+                  - generic [ref=e269]: Senior QA Automation Engineer
+                  - generic [ref=e271]:
+                    - generic [ref=e272]: Morningstar
+                    - generic [ref=e273]: "3.7"
+                  - generic [ref=e278]: Mumbai
+                - generic [ref=e282] [cursor=pointer]:
+                  - generic [ref=e283]:
+                    - img "SBI Payments" [ref=e285]
+                    - generic [ref=e286]: 1d ago
+                  - generic [ref=e288]: Software Tester
+                  - generic [ref=e290]:
+                    - generic [ref=e291]: SBI Payments
+                    - generic [ref=e292]: "4.0"
+                  - generic [ref=e297]: Mumbai(Lower Parel)
+                - generic [ref=e301] [cursor=pointer]:
+                  - generic [ref=e302]:
+                    - img "Larsen & Toubro (L&T)" [ref=e304]
+                    - generic [ref=e305]: 5d ago
+                  - generic [ref=e307]: Walk-in || Software Developer - FullStack
+                  - generic [ref=e309]:
+                    - generic [ref=e310]: Larsen & Toubro (L&T)
+                    - generic [ref=e311]: "3.9"
+                  - generic [ref=e316]: Bengaluru
+                - generic [ref=e320] [cursor=pointer]:
+                  - generic [ref=e321]:
+                    - img "Bajaj Finance" [ref=e323]
+                    - generic [ref=e324]: 1d ago
+                  - generic [ref=e326]: Senior Software Engineer
+                  - generic [ref=e328]:
+                    - generic [ref=e329]: Bajaj Finance
+                    - generic [ref=e330]: "3.9"
+                  - generic [ref=e335]: Pune
+                - generic [ref=e339] [cursor=pointer]:
+                  - generic [ref=e340]:
+                    - img "Quest Global" [ref=e342]
+                    - generic [ref=e343]: 4d ago
+                  - generic [ref=e345]: Automation Engineer
+                  - generic [ref=e347]:
+                    - generic [ref=e348]: Quest Global
+                    - generic [ref=e349]: "3.5"
+                  - generic [ref=e354]: Bengaluru
+                - generic [ref=e358] [cursor=pointer]:
+                  - generic [ref=e359]:
+                    - img "National Payments Corporation of India (NPCI)" [ref=e361]
+                    - generic [ref=e362]: 6d ago
+                  - generic [ref=e364]: NBBL - Associate /Senior Associate Devops
+                  - generic [ref=e366]:
+                    - generic [ref=e367]: National Payments Corporation of India (NPCI)
+                    - generic [ref=e368]: "4.0"
+                  - generic [ref=e373]: Mumbai (All Areas)(Goregaon), Hyderabad(Narsingi), Chennai(Siruseri Sipcot IT Park)
+                - generic [ref=e377] [cursor=pointer]: View all jobs
+              - img [ref=e380] [cursor=pointer]
+        - generic [ref=e385]:
+          - generic [ref=e386]:
+            - generic [ref=e387]:
+              - img "ear-header-image" [ref=e388]
+              - generic [ref=e389]:
+                - generic [ref=e390]:
+                  - generic [ref=e391]: 75 Early access roles from top companies
+                  - img "ear-info" [ref=e392] [cursor=pointer]
+                - paragraph [ref=e393]: See what recruiters are searching for, even before they post a job
+            - link "View all" [ref=e394] [cursor=pointer]:
+              - /url: /mnjuser/recommended-earjobs
+          - generic [ref=e396]:
+            - generic [ref=e398]:
+              - generic [ref=e402]:
+                - generic [ref=e403]:
+                  - generic "QA Engineer" [ref=e404]
+                  - generic [ref=e405]: 21h ago
+                - generic "Micro-Sized B2B Firm in IT Services Sector" [ref=e408]
+                - generic [ref=e410]:
+                  - generic "Powered by Ambition Box" [ref=e412]:
+                    - generic [ref=e413]: 
+                    - generic [ref=e414]: 3.5+
+                  - generic [ref=e416]: Corporate
+                  - generic [ref=e418]: Service
+                - generic [ref=e420]:
+                  - generic "3-6 Yrs" [ref=e422]: 3-6 Yrs
+                  - generic "5-10 Lacs P.A." [ref=e424]: 5-10 Lacs P.A.
+                  - generic "Pune, Coimbatore, Bangalore/Bengaluru" [ref=e426]: Pune, Coimbatore, Bangalore/Bengaluru
+                - generic [ref=e428]:
+                  - generic [ref=e429]: Hiring for one of these companies
+                  - generic [ref=e430]:
+                    - generic [ref=e431]:
+                      - generic "Kovai Soft Technologies" [ref=e432] [cursor=pointer]:
+                        - img "Kovai Soft Technologies" [ref=e433]
+                      - generic "Konverge Technologies" [ref=e434] [cursor=pointer]:
+                        - img "Konverge Technologies" [ref=e435]
+                      - generic "Soft Suave" [ref=e436] [cursor=pointer]:
+                        - img "Soft Suave" [ref=e437]
+                      - generic "Tvisha Technologies" [ref=e438] [cursor=pointer]:
+                        - img "Tvisha Technologies" [ref=e439]
+                      - generic "Techies Infotech" [ref=e440] [cursor=pointer]:
+                        - img "Techies Infotech" [ref=e441]
+                    - button "Share interest" [ref=e442] [cursor=pointer]
+              - generic [ref=e446]:
+                - generic [ref=e447]:
+                  - generic "Sr. QA Engineer" [ref=e448]
+                  - generic [ref=e449]: 21h ago
+                - generic "Large IT MNC" [ref=e452]
+                - generic [ref=e454]:
+                  - generic "Powered by Ambition Box" [ref=e456]:
+                    - generic [ref=e457]: 
+                    - generic [ref=e458]: 3.5+
+                  - generic [ref=e460]: Foreign MNC
+                  - generic [ref=e462]: Service
+                  - generic [ref=e464]: Highly Rated by Women
+                - generic [ref=e466]:
+                  - generic "3-8 Yrs" [ref=e468]: 3-8 Yrs
+                  - generic "8-13 Lacs P.A." [ref=e470]: 8-13 Lacs P.A.
+                  - generic "Hyderabad/Secunderabad, Pune, Gurgaon/Gurugram, Chennai, Bangalore/Bengaluru" [ref=e472]: Hyderabad/Secunderabad, Pune, Gurgaon/Gurugram, Chennai, Bangalore/Bengaluru
+                - generic [ref=e474]:
+                  - generic [ref=e475]: Hiring for one of these companies
+                  - generic [ref=e476]:
+                    - generic [ref=e477]:
+                      - generic "Hcltech" [ref=e478] [cursor=pointer]:
+                        - img "Hcltech" [ref=e479]
+                      - generic "Infosys" [ref=e480] [cursor=pointer]:
+                        - img "Infosys" [ref=e481]
+                      - generic "Wipro" [ref=e482] [cursor=pointer]:
+                        - img "Wipro" [ref=e483]
+                      - generic "Tata Consultancy Services" [ref=e484] [cursor=pointer]:
+                        - img "Tata Consultancy Services" [ref=e485]
+                      - generic "Accenture" [ref=e486] [cursor=pointer]:
+                        - img "Accenture" [ref=e487]
+                    - button "Share interest" [ref=e488] [cursor=pointer]
+              - generic [ref=e492]:
+                - generic [ref=e493]:
+                  - generic "Sr. QA Engineer" [ref=e494]
+                  - generic [ref=e495]: 5d ago
+                - generic "Leading company in IT & technology services" [ref=e498]
+                - generic "Powered by Ambition Box" [ref=e502]:
+                  - generic [ref=e503]: 
+                  - generic [ref=e504]: 2.5+
+                - generic [ref=e506]:
+                  - generic "4-7 Yrs" [ref=e508]: 4-7 Yrs
+                  - generic "8-12 Lacs P.A." [ref=e510]: 8-12 Lacs P.A.
+                  - generic "Hyderabad/Secunderabad, New Delhi, Pune, Gurgaon/Gurugram, Bangalore/Bengaluru" [ref=e512]: Hyderabad/Secunderabad, New Delhi, Pune, Gurgaon/Gurugram, Bangalore/Bengaluru
+                - generic [ref=e514]:
+                  - generic [ref=e515]: Hiring for one of these companies
+                  - generic [ref=e516]:
+                    - generic [ref=e517]:
+                      - generic "Hcltech" [ref=e518] [cursor=pointer]:
+                        - img "Hcltech" [ref=e519]
+                      - generic "Tech Mahindra" [ref=e520] [cursor=pointer]:
+                        - img "Tech Mahindra" [ref=e521]
+                      - generic "Infojini Consulting" [ref=e522] [cursor=pointer]:
+                        - img "Infojini Consulting" [ref=e523]
+                      - generic "Infosys" [ref=e524] [cursor=pointer]:
+                        - img "Infosys" [ref=e525]
+                      - generic "Ltimindtree" [ref=e526] [cursor=pointer]:
+                        - img "Ltimindtree" [ref=e527]
+                    - button "Share interest" [ref=e528] [cursor=pointer]
+              - generic [ref=e532]:
+                - generic [ref=e533]:
+                  - generic "Sr. QA Engineer" [ref=e534]
+                  - generic [ref=e535]: 20h ago
+                - generic "Leading IT Consulting MNC" [ref=e538]
+                - generic [ref=e540]:
+                  - generic "Powered by Ambition Box" [ref=e542]:
+                    - generic [ref=e543]: 
+                    - generic [ref=e544]: 3.0+
+                  - generic [ref=e546]: Indian MNC
+                  - generic [ref=e548]: Service
+                  - generic [ref=e550]: Fortune India 500 (2023)
+                - generic [ref=e552]:
+                  - generic "4-8 Yrs" [ref=e554]: 4-8 Yrs
+                  - generic "7-12 Lacs P.A." [ref=e556]: 7-12 Lacs P.A.
+                  - generic "Hyderabad/Secunderabad, Pune, Chennai, Gurgaon/Gurugram, Bangalore/Bengaluru" [ref=e558]: Hyderabad/Secunderabad, Pune, Chennai, Gurgaon/Gurugram, Bangalore/Bengaluru
+                - generic [ref=e560]:
+                  - generic [ref=e561]: Hiring for one of these companies
+                  - generic [ref=e562]:
+                    - generic [ref=e563]:
+                      - generic "Accenture" [ref=e564] [cursor=pointer]:
+                        - img "Accenture" [ref=e565]
+                      - generic "Infosys" [ref=e566] [cursor=pointer]:
+                        - img "Infosys" [ref=e567]
+                      - generic "Hcltech" [ref=e568] [cursor=pointer]:
+                        - img "Hcltech" [ref=e569]
+                      - generic "Cognizant" [ref=e570] [cursor=pointer]:
+                        - img "Cognizant" [ref=e571]
+                      - generic "Wipro" [ref=e572] [cursor=pointer]:
+                        - img "Wipro" [ref=e573]
+                    - button "Share interest" [ref=e574] [cursor=pointer]
+              - generic [ref=e578]:
+                - generic [ref=e579]:
+                  - generic "QA Engineer" [ref=e580]
+                  - generic [ref=e581]: 5d ago
+                - generic "A dynamic IT solutions company" [ref=e584]
+                - generic [ref=e586]:
+                  - generic "4-9 Yrs" [ref=e588]: 4-9 Yrs
+                  - generic "6-11 Lacs P.A." [ref=e590]: 6-11 Lacs P.A.
+                  - generic "Mumbai, Hyderabad/Secunderabad, Pune, Chennai, Bangalore/Bengaluru" [ref=e592]: Mumbai, Hyderabad/Secunderabad, Pune, Chennai, Bangalore/Bengaluru
+                - generic [ref=e594]:
+                  - generic [ref=e595]: Hiring for one of these companies
+                  - generic [ref=e596]:
+                    - generic [ref=e597]:
+                      - generic "Virtusa" [ref=e598] [cursor=pointer]:
+                        - img "Virtusa" [ref=e599]
+                      - generic "Apex Information Technology" [ref=e600] [cursor=pointer]:
+                        - img "Apex Information Technology" [ref=e601]
+                      - generic "Ricoh" [ref=e602] [cursor=pointer]:
+                        - img "Ricoh" [ref=e603]
+                      - generic "Xcaliber Infotech" [ref=e604] [cursor=pointer]:
+                        - img "Xcaliber Infotech" [ref=e605]
+                    - button "Share interest" [ref=e606] [cursor=pointer]
+              - generic [ref=e610]:
+                - generic [ref=e611]:
+                  - generic "Sr. QA Engineer" [ref=e612]
+                  - generic [ref=e613]: 20h ago
+                - generic "Firm in IT Services Sector" [ref=e616]
+                - generic "Powered by Ambition Box" [ref=e620]:
+                  - generic [ref=e621]: 
+                  - generic [ref=e622]: 4.0+
+                - generic [ref=e624]:
+                  - generic "4-9 Yrs" [ref=e626]: 4-9 Yrs
+                  - generic "8-13 Lacs P.A." [ref=e628]: 8-13 Lacs P.A.
+                  - generic "Mumbai, Hyderabad/Secunderabad, Pune, Chennai, Bangalore/Bengaluru" [ref=e630]: Mumbai, Hyderabad/Secunderabad, Pune, Chennai, Bangalore/Bengaluru
+                - generic [ref=e632]:
+                  - generic [ref=e633]: Hiring for one of these companies
+                  - generic [ref=e634]:
+                    - generic [ref=e635]:
+                      - generic "Tek Ninjas" [ref=e636] [cursor=pointer]:
+                        - img "Tek Ninjas" [ref=e637]
+                      - generic "Persistent" [ref=e638] [cursor=pointer]:
+                        - img "Persistent" [ref=e639]
+                      - generic "Robosoft Technologies" [ref=e640] [cursor=pointer]:
+                        - img "Robosoft Technologies" [ref=e641]
+                      - generic "Publicis Sapient" [ref=e642] [cursor=pointer]:
+                        - img "Publicis Sapient" [ref=e643]
+                      - generic "Srijan" [ref=e644] [cursor=pointer]:
+                        - img "Srijan" [ref=e645]
+                    - button "Share interest" [ref=e646] [cursor=pointer]
+              - generic [ref=e650]:
+                - generic [ref=e651]:
+                  - generic "Sr. Test Automation Engineer" [ref=e652]
+                  - generic [ref=e653]: 21h ago
+                - generic "Foreign IT Consulting MNC" [ref=e656]
+                - generic [ref=e658]:
+                  - generic "Powered by Ambition Box" [ref=e660]:
+                    - generic [ref=e661]: 
+                    - generic [ref=e662]: 2.5+
+                  - generic [ref=e664]: Foreign MNC
+                  - generic [ref=e666]: Service
+                - generic [ref=e668]:
+                  - generic "4-8 Yrs" [ref=e670]: 4-8 Yrs
+                  - generic "7-12 Lacs P.A." [ref=e672]: 7-12 Lacs P.A.
+                  - generic "Kochi/Cochin, Mumbai, Pune, Chennai, Bangalore/Bengaluru" [ref=e674]: Kochi/Cochin, Mumbai, Pune, Chennai, Bangalore/Bengaluru
+                - generic [ref=e676]:
+                  - generic [ref=e677]: Hiring for one of these companies
+                  - generic [ref=e678]:
+                    - generic [ref=e679]:
+                      - generic "LG Soft India" [ref=e680] [cursor=pointer]:
+                        - img "LG Soft India" [ref=e681]
+                      - generic "Calsoft" [ref=e682] [cursor=pointer]:
+                        - img "Calsoft" [ref=e683]
+                      - generic "ASM Technologies" [ref=e684] [cursor=pointer]:
+                        - img "ASM Technologies" [ref=e685]
+                      - generic "Rolta India" [ref=e686] [cursor=pointer]:
+                        - img "Rolta India" [ref=e687]
+                      - generic "Mindteck" [ref=e688] [cursor=pointer]:
+                        - img "Mindteck" [ref=e689]
+                    - button "Share interest" [ref=e690] [cursor=pointer]
+              - generic [ref=e694]:
+                - generic [ref=e695]:
+                  - generic "Software Dev Test Engineer" [ref=e696]
+                  - generic [ref=e697]: 3d ago
+                - generic "Leading IT MNC" [ref=e700]
+                - generic [ref=e702]:
+                  - generic "Powered by Ambition Box" [ref=e704]:
+                    - generic [ref=e705]: 
+                    - generic [ref=e706]: 3.0+
+                  - generic [ref=e708]: Corporate
+                  - generic [ref=e710]: Service
+                - generic [ref=e712]:
+                  - generic "4-8 Yrs" [ref=e714]: 4-8 Yrs
+                  - generic "9-13 Lacs P.A." [ref=e716]: 9-13 Lacs P.A.
+                  - generic "Hyderabad/Secunderabad, Pune, Bangalore/Bengaluru" [ref=e718]: Hyderabad/Secunderabad, Pune, Bangalore/Bengaluru
+                - generic [ref=e720]:
+                  - generic [ref=e721]: Hiring for one of these companies
+                  - generic [ref=e722]:
+                    - generic [ref=e723]:
+                      - generic "Infogain" [ref=e724] [cursor=pointer]:
+                        - img "Infogain" [ref=e725]
+                      - generic "Bank Of America" [ref=e726] [cursor=pointer]:
+                        - img "Bank Of America" [ref=e727]
+                      - generic "Ness Digital Engineering" [ref=e728] [cursor=pointer]:
+                        - img "Ness Digital Engineering" [ref=e729]
+                      - generic "AXA Global Business Services" [ref=e730] [cursor=pointer]:
+                        - img "AXA Global Business Services" [ref=e731]
+                      - generic "Microland" [ref=e732] [cursor=pointer]:
+                        - img "Microland" [ref=e733]
+                    - button "Share interest" [ref=e734] [cursor=pointer]
+              - generic [ref=e738]:
+                - generic [ref=e739]:
+                  - generic "QA Engineer" [ref=e740]
+                  - generic [ref=e741]: 5d ago
+                - generic "Leading company in IT & technology services" [ref=e744]
+                - generic "Powered by Ambition Box" [ref=e748]:
+                  - generic [ref=e749]: 
+                  - generic [ref=e750]: 2.5+
+                - generic [ref=e752]:
+                  - generic "4-8 Yrs" [ref=e754]: 4-8 Yrs
+                  - generic "7-12 Lacs P.A." [ref=e756]: 7-12 Lacs P.A.
+                  - generic "Noida, Mumbai, Hyderabad/Secunderabad, Chennai, Bangalore/Bengaluru" [ref=e758]: Noida, Mumbai, Hyderabad/Secunderabad, Chennai, Bangalore/Bengaluru
+                - generic [ref=e760]:
+                  - generic [ref=e761]: Hiring for one of these companies
+                  - generic [ref=e762]:
+                    - generic [ref=e763]:
+                      - generic "Hcltech" [ref=e764] [cursor=pointer]:
+                        - img "Hcltech" [ref=e765]
+                      - generic "Infojini Consulting" [ref=e766] [cursor=pointer]:
+                        - img "Infojini Consulting" [ref=e767]
+                      - generic "Tech Mahindra" [ref=e768] [cursor=pointer]:
+                        - img "Tech Mahindra" [ref=e769]
+                      - generic "Wipro" [ref=e770] [cursor=pointer]:
+                        - img "Wipro" [ref=e771]
+                      - generic "Ltimindtree" [ref=e772] [cursor=pointer]:
+                        - img "Ltimindtree" [ref=e773]
+                    - button "Share interest" [ref=e774] [cursor=pointer]
+              - generic [ref=e778]:
+                - generic [ref=e779]:
+                  - generic "Sr. QA Engineer" [ref=e780]
+                  - generic [ref=e781]: 5d ago
+                - generic "Large IT Services & Consulting Firm" [ref=e784]
+                - generic [ref=e786]:
+                  - generic "Powered by Ambition Box" [ref=e788]:
+                    - generic [ref=e789]: 
+                    - generic [ref=e790]: 3.0+
+                  - generic [ref=e792]: Corporate
+                  - generic [ref=e794]: Service
+                - generic [ref=e796]:
+                  - generic "4-7 Yrs" [ref=e798]: 4-7 Yrs
+                  - generic "4-9 Lacs P.A." [ref=e800]: 4-9 Lacs P.A.
+                  - generic "Kolkata, Hyderabad/Secunderabad, Pune, Chennai, Bangalore/Bengaluru" [ref=e802]: Kolkata, Hyderabad/Secunderabad, Pune, Chennai, Bangalore/Bengaluru
+                - generic [ref=e804]:
+                  - generic [ref=e805]: Hiring for one of these companies
+                  - generic [ref=e806]:
+                    - generic [ref=e807]:
+                      - generic "Sonata Software" [ref=e808] [cursor=pointer]:
+                        - img "Sonata Software" [ref=e809]
+                      - generic "Microland" [ref=e810] [cursor=pointer]:
+                        - img "Microland" [ref=e811]
+                      - generic "AXA Global Business Services" [ref=e812] [cursor=pointer]:
+                        - img "AXA Global Business Services" [ref=e813]
+                      - generic "Ness Digital Engineering" [ref=e814] [cursor=pointer]:
+                        - img "Ness Digital Engineering" [ref=e815]
+                      - generic "Net Connect" [ref=e816] [cursor=pointer]:
+                        - img "Net Connect" [ref=e817]
+                    - button "Share interest" [ref=e818] [cursor=pointer]
+            - img [ref=e821] [cursor=pointer]
+        - generic [ref=e823]:
+          - generic [ref=e824]:
+            - img "rmj-icn" [ref=e825]
+            - 'heading "NVites: Invitation to apply" [level=2] [ref=e826]'
+            - generic [ref=e827] [cursor=pointer]: View all
+          - generic [ref=e828]:
+            - generic [ref=e829] [cursor=pointer]:
+              - img [ref=e831]
+              - generic [ref=e832]:
+                - heading "Playwright Automation Tester" [level=2] [ref=e833]
+                - generic [ref=e834]:
+                  - heading "Capgemini" [level=4] [ref=e835]
+                  - heading "Invited 7d ago" [level=4] [ref=e836]
+            - generic [ref=e837] [cursor=pointer]:
+              - img [ref=e839]
+              - generic [ref=e840]:
+                - heading "Software Automation Testing Engineer" [level=2] [ref=e841]
+                - generic [ref=e842]:
+                  - heading "Alco Foods" [level=4] [ref=e843]
+                  - heading "Invited 12d ago" [level=4] [ref=e844]
+            - generic [ref=e845] [cursor=pointer]:
+              - img [ref=e847]
+              - img "client" [ref=e849]
+              - generic [ref=e850]:
+                - heading "Automation Tester" [level=2] [ref=e851]
+                - generic [ref=e852]:
+                  - heading "Hiring for IT Services & Consulting industry" [level=4] [ref=e853]
+                  - heading "Invited 27d ago" [level=4] [ref=e854]
+        - generic [ref=e855]:
+          - generic [ref=e859]:
+            - generic [ref=e860]:
+              - generic [ref=e861]:
+                - generic [ref=e862]: Problem of the day
+                - generic [ref=e863]:
+                  - text: Earn 10 EXP to boost your chances on Code 360 leaderboard
+                  - img [ref=e865] [cursor=pointer]
+              - img "cn-logo" [ref=e867]
+            - generic [ref=e868]:
+              - text: "Skill covered: React"
+              - img "edit icon" [ref=e869] [cursor=pointer]
+            - generic [ref=e870]:
+              - generic [ref=e871]: Which of the following best defines the "key" prop in React?
+              - generic [ref=e872]:
+                - generic [ref=e875] [cursor=pointer]: "\"Key\" prop is used to look pretty, and there is no benefit whatsoever."
+                - generic [ref=e878] [cursor=pointer]: "\"Key\" prop is a way for React to identify a newly added item in a list and compare it during the \"diffing\" algorithm."
+                - generic [ref=e881] [cursor=pointer]: It is one of the attributes in HTML.
+                - generic [ref=e884] [cursor=pointer]: It is NOT commonly used in an array.
+            - generic [ref=e885]:
+              - generic [ref=e886]:
+                - text: "Attempted by:"
+                - generic [ref=e887]: 7.1K+
+              - generic [ref=e888] [cursor=pointer]: Submit
+          - generic [ref=e892]:
+            - generic [ref=e893]:
+              - generic [ref=e894]: Highlight your application and stand out from rest of the applicants
+              - generic [ref=e895]:
+                - generic [ref=e896] [cursor=pointer]:
+                  - img [ref=e897]
+                  - text: Know more
+                - paragraph [ref=e898]: Paid service by Fastforward
+            - img [ref=e900]
+        - generic [ref=e901]:
+          - generic [ref=e902]:
+            - heading "How your applies matched your profile in last 7 days?" [level=2] [ref=e903]
+            - link "View all" [ref=e904] [cursor=pointer]:
+              - /url: /myapply/historypage
+          - generic [ref=e906]:
+            - generic [ref=e908]:
+              - generic [ref=e911]:
+                - img [ref=e920]:
+                  - generic [ref=e921]: LOW
+                - paragraph [ref=e925]: 2 out of 18 applies showed a match
+              - generic [ref=e928]:
+                - generic [ref=e929]:
+                  - img [ref=e931]
+                  - img [ref=e935]
+                - generic [ref=e936]: Work Experience
+                - generic [ref=e937]: 3.0 yrs experience
+                - generic [ref=e938]: 44% match
+              - generic [ref=e941]:
+                - generic [ref=e942]:
+                  - img [ref=e944]
+                  - img [ref=e948]
+                - generic [ref=e949]: Location
+                - generic [ref=e950]: Pune
+                - generic [ref=e951]: 78% match
+              - generic [ref=e955]:
+                - paragraph [ref=e956]: Want to review your profile information?
+                - paragraph [ref=e957]: This will improve your job recommendations
+                - link "Update Profile" [ref=e958] [cursor=pointer]:
+                  - /url: /mnjuser/profile
+              - generic [ref=e961]:
+                - generic [ref=e962]:
+                  - img [ref=e964]
+                  - img [ref=e968]
+                - generic [ref=e969]: Keyskills
+                - generic [ref=e970]: QA Automation,SDET,Selenium,Java,Playwright,TypeScript,Javascript,Cucumber,Testng
+                - generic [ref=e971]: 61% match
+              - generic [ref=e974]:
+                - generic [ref=e975]:
+                  - img [ref=e977]
+                  - img [ref=e981]
+                - generic [ref=e982]: Industry
+                - generic [ref=e983]: IT Services & Consulting
+                - generic [ref=e984]: 78% match
+              - generic [ref=e987]:
+                - generic [ref=e988]:
+                  - img [ref=e990]
+                  - img [ref=e994]
+                - generic [ref=e995]: Department
+                - generic [ref=e996]: Engineering - Software & QA
+                - generic [ref=e997]: 67% match
+              - generic [ref=e1000]:
+                - generic [ref=e1001]:
+                  - img [ref=e1003]
+                  - img [ref=e1007]
+                - generic [ref=e1008]: Early Applicant
+                - generic [ref=e1009]: Applied to fresh jobs
+                - generic [ref=e1010]: 78% match
+            - img [ref=e1012] [cursor=pointer]
+        - generic [ref=e1017]:
+          - generic [ref=e1018]:
+            - generic [ref=e1019]:
+              - heading "Top companies" [level=2] [ref=e1021]
+              - link "View all" [ref=e1023] [cursor=pointer]:
+                - /url: /companies-hiring-in-india?src=mnjCompanies_homepage_srch&title=Top+companies&subtitle=Hiring+for+Quality+Assurance+and+Testing&searchType=companySearch&qcallRoleCategory=1027&qcallDept=5&qccustomTag=195
+            - heading "Hiring for Quality Assurance and Testing" [level=2] [ref=e1025]
+          - generic [ref=e1027]:
+            - generic [ref=e1029]:
+              - generic [ref=e1032] [cursor=pointer]:
+                - generic "GreyOrange" [ref=e1035]
+                - generic [ref=e1036]:
+                  - img "star" [ref=e1037]
+                  - generic [ref=e1038]: "3.1"
+                  - generic [ref=e1039]: 383 reviews
+                - generic [ref=e1040]: View jobs
+              - generic [ref=e1043] [cursor=pointer]:
+                - generic "Merck Sharp & Dohme (MSD)" [ref=e1046]
+                - generic [ref=e1047]:
+                  - img "star" [ref=e1048]
+                  - generic [ref=e1049]: "3.7"
+                  - generic [ref=e1050]: 311 reviews
+                - generic [ref=e1051]: View jobs
+              - generic [ref=e1054] [cursor=pointer]:
+                - generic "Commscope" [ref=e1057]
+                - generic [ref=e1058]:
+                  - img "star" [ref=e1059]
+                  - generic [ref=e1060]: "3.8"
+                  - generic [ref=e1061]: 465 reviews
+                - generic [ref=e1062]: View jobs
+              - generic [ref=e1065] [cursor=pointer]:
+                - generic "athenahealth" [ref=e1068]
+                - generic [ref=e1069]:
+                  - img "star" [ref=e1070]
+                  - generic [ref=e1071]: "4.0"
+                  - generic [ref=e1072]: 496 reviews
+                - generic [ref=e1073]: View jobs
+              - generic [ref=e1076] [cursor=pointer]:
+                - generic "Finolex Cables" [ref=e1079]
+                - generic [ref=e1080]:
+                  - img "star" [ref=e1081]
+                  - generic [ref=e1082]: "3.7"
+                  - generic [ref=e1083]: 751 reviews
+                - generic [ref=e1084]: View jobs
+              - generic [ref=e1087] [cursor=pointer]:
+                - generic "Becton Dickinson" [ref=e1090]
+                - generic [ref=e1091]:
+                  - img "star" [ref=e1092]
+                  - generic [ref=e1093]: "3.9"
+                  - generic [ref=e1094]: 613 reviews
+                - generic [ref=e1095]: View jobs
+              - generic [ref=e1098] [cursor=pointer]:
+                - generic "ACL Digital" [ref=e1101]
+                - generic [ref=e1102]:
+                  - img "star" [ref=e1103]
+                  - generic [ref=e1104]: "3.6"
+                  - generic [ref=e1105]: 889 reviews
+                - generic [ref=e1106]: View jobs
+              - generic [ref=e1109] [cursor=pointer]:
+                - generic "EXL" [ref=e1112]
+                - generic [ref=e1113]:
+                  - img "star" [ref=e1114]
+                  - generic [ref=e1115]: "3.6"
+                  - generic [ref=e1116]: 8.6K+ reviews
+                - generic [ref=e1117]: View jobs
+              - generic [ref=e1120] [cursor=pointer]:
+                - generic "Adobe" [ref=e1123]
+                - generic [ref=e1124]:
+                  - img "star" [ref=e1125]
+                  - generic [ref=e1126]: "3.7"
+                  - generic [ref=e1127]: 1.4K+ reviews
+                - generic [ref=e1128]: View jobs
+              - generic [ref=e1131] [cursor=pointer]:
+                - generic "Cybage" [ref=e1134]
+                - generic [ref=e1135]:
+                  - img "star" [ref=e1136]
+                  - generic [ref=e1137]: "3.7"
+                  - generic [ref=e1138]: 2.3K+ reviews
+                - generic [ref=e1139]: View jobs
+            - img [ref=e1142] [cursor=pointer]
+        - generic [ref=e1144]:
+          - generic [ref=e1148]:
+            - generic [ref=e1149]:
+              - generic [ref=e1150]: Interview experiences
+              - link "View all" [ref=e1151] [cursor=pointer]:
+                - /url: https://www.naukri.com/code360/interview-experiences?cvId=057b5f89b7014c01b8ae2da908c87ce2&campaign=interview_exp_dashboard&medium=desktop&source=naukri
+            - generic [ref=e1152]: Get insights from others’ interview journeys
+            - generic [ref=e1154]:
+              - generic [ref=e1156]:
+                - generic [ref=e1160] [cursor=pointer]:
+                  - generic [ref=e1162]:
+                    - img [ref=e1165]
+                    - generic [ref=e1166]: SDE - 1
+                    - generic [ref=e1167]: 4 rounds|6 problems
+                  - generic [ref=e1168]:
+                    - generic [ref=e1169]: Interviewed by Paytm
+                    - generic [ref=e1170]: 0-2 yrs|Aug 2020
+                - generic [ref=e1174] [cursor=pointer]:
+                  - generic [ref=e1176]:
+                    - img [ref=e1179]
+                    - generic [ref=e1180]: Associate Software Engineer
+                    - generic [ref=e1181]: 2 rounds|3 problems
+                  - generic [ref=e1182]:
+                    - generic [ref=e1183]: Interviewed by Tech Mahindra
+                    - generic [ref=e1184]: 0-2 yrs|Oct 2021
+                    - generic [ref=e1186]: 20 upvotes
+                - generic [ref=e1190] [cursor=pointer]:
+                  - generic [ref=e1192]:
+                    - img [ref=e1195]
+                    - generic [ref=e1196]: Backend Developer
+                    - generic [ref=e1197]: 1 round|4 problems
+                  - generic [ref=e1198]:
+                    - generic [ref=e1199]: Interviewed by Nobroker
+                    - generic [ref=e1200]: 0-2 yrs|Dec 2021
+                    - generic [ref=e1201]:
+                      - generic [ref=e1202]: 1.7K+ views
+                      - generic [ref=e1203]: 2 upvotes
+                - generic [ref=e1207] [cursor=pointer]:
+                  - generic [ref=e1209]:
+                    - img [ref=e1212]
+                    - generic [ref=e1213]: Software Engineer
+                    - generic [ref=e1214]: 3 rounds|2 problems
+                  - generic [ref=e1215]:
+                    - generic [ref=e1216]: Interviewed by Optum
+                    - generic [ref=e1217]: 0-2 yrs|Oct 2021
+                    - generic [ref=e1218]:
+                      - generic [ref=e1219]: 1.8K+ views
+                      - generic [ref=e1220]: 6 upvotes
+                - generic [ref=e1224] [cursor=pointer]:
+                  - generic [ref=e1226]:
+                    - img [ref=e1229]
+                    - generic [ref=e1230]: Automation Engineer
+                    - generic [ref=e1231]: 3 rounds|3 problems
+                  - generic [ref=e1232]:
+                    - generic [ref=e1233]: Interviewed by Tata Consultancy Services
+                    - generic [ref=e1234]: 0-2 yrs|Nov 2022
+                    - generic [ref=e1235]:
+                      - generic [ref=e1236]: 3K+ views
+                      - generic [ref=e1237]: 10 upvotes
+              - img [ref=e1240] [cursor=pointer]
+            - generic [ref=e1243]:
+              - generic [ref=e1244]: Did you find these experiences helpful?
+              - generic [ref=e1245]:
+                - img [ref=e1247] [cursor=pointer]
+                - img [ref=e1249] [cursor=pointer]
+          - generic [ref=e1253]:
+            - generic [ref=e1254]:
+              - generic [ref=e1255]: Become interview ready
+              - link "View all" [ref=e1256] [cursor=pointer]:
+                - /url: https://www.naukri.com/code360/problems?cvId=057b5f89b7014c01b8ae2da908c87ce2&campaign=dashboard_interviews&medium=desktop&source=naukri
+            - generic [ref=e1257]: Interview questions based on your activity
+            - generic [ref=e1259]:
+              - generic [ref=e1261] [cursor=pointer]:
+                - generic [ref=e1264]:
+                  - generic [ref=e1265]: Sum Of Infinite Array
+                  - generic [ref=e1266]:
+                    - text: Q. Sum of Infinite Array. Given an array “A” of N i
+                    - generic [ref=e1267]: ... read more
+                  - generic [ref=e1268]:
+                    - generic [ref=e1269]:
+                      - img [ref=e1271]
+                      - img [ref=e1273]
+                    - generic [ref=e1274]:
+                      - text: Asked at
+                      - generic "Deloitte Consulting" [ref=e1275]
+                      - generic [ref=e1276]: + 1
+                  - generic [ref=e1277]:
+                    - generic [ref=e1278]: Moderate
+                    - generic [ref=e1279]: Attempted by 51045
+                - generic [ref=e1282]:
+                  - generic [ref=e1283]: Pair Sum
+                  - generic [ref=e1284]:
+                    - text: Q. You are given an integer array 'ARR' of size 'N'
+                    - generic [ref=e1285]: ... read more
+                  - generic [ref=e1286]:
+                    - generic [ref=e1287]:
+                      - img [ref=e1289]
+                      - img [ref=e1291]
+                      - img [ref=e1293]
+                    - generic [ref=e1294]:
+                      - text: Asked at
+                      - generic "Genpact" [ref=e1295]
+                      - generic [ref=e1296]: + 78
+                  - generic [ref=e1297]:
+                    - generic [ref=e1298]: Easy
+                    - generic [ref=e1299]: Attempted by 163591
+                - generic [ref=e1302]:
+                  - generic [ref=e1303]: Reverse The Array
+                  - generic [ref=e1304]:
+                    - text: Q. Given an array/list 'ARR' of integers and a posi
+                    - generic [ref=e1305]: ... read more
+                  - generic [ref=e1306]:
+                    - generic [ref=e1307]:
+                      - img [ref=e1309]
+                      - img [ref=e1311]
+                      - img [ref=e1313]
+                    - generic [ref=e1314]:
+                      - text: Asked at
+                      - generic "Wipro" [ref=e1315]
+                      - generic [ref=e1316]: + 20
+                  - generic [ref=e1317]:
+                    - generic [ref=e1318]: Easy
+                    - generic [ref=e1319]: Attempted by 173986
+                - generic [ref=e1322]:
+                  - generic [ref=e1323]: Two Sum
+                  - generic [ref=e1324]:
+                    - text: Q. You are given an array of integers 'ARR' of leng
+                    - generic [ref=e1325]: ... read more
+                  - generic [ref=e1326]:
+                    - generic [ref=e1327]:
+                      - img [ref=e1329]
+                      - img [ref=e1331]
+                      - img [ref=e1333]
+                    - generic [ref=e1334]:
+                      - text: Asked at
+                      - generic "Silicon Labs" [ref=e1335]
+                      - generic [ref=e1336]: + 85
+                  - generic [ref=e1337]:
+                    - generic [ref=e1338]: Easy
+                    - generic [ref=e1339]: Attempted by 55028
+                - generic [ref=e1342]:
+                  - generic [ref=e1343]: Sum or Product
+                  - generic [ref=e1344]:
+                    - text: Q. Write a program that asks the user for a number
+                    - generic [ref=e1345]: ... read more
+                  - generic [ref=e1346]:
+                    - generic [ref=e1347]:
+                      - img [ref=e1349]
+                      - img [ref=e1351]
+                      - img [ref=e1353]
+                    - generic [ref=e1354]:
+                      - text: Asked at
+                      - generic "Tata Consultancy Services" [ref=e1355]
+                      - generic [ref=e1356]: + 3
+                  - generic [ref=e1357]:
+                    - generic [ref=e1358]: Easy
+                    - generic [ref=e1359]: Attempted by 59275
+              - img [ref=e1362] [cursor=pointer]
+            - generic [ref=e1365]:
+              - generic [ref=e1366]: Did you find these questions helpful?
+              - generic [ref=e1367]:
+                - img [ref=e1369] [cursor=pointer]
+                - img [ref=e1371] [cursor=pointer]
+        - generic [ref=e1372]:
+          - generic [ref=e1373]:
+            - heading "Stay updated with our blogs" [level=2] [ref=e1374]
+            - link "View all" [ref=e1375] [cursor=pointer]:
+              - /url: /blog?utm_campaign=dashboard_widget&utm_source=naukri&utm_medium=desktop
+          - generic [ref=e1377]:
+            - generic [ref=e1379]:
+              - generic [ref=e1382] [cursor=pointer]:
+                - img "blog-image" [ref=e1383]
+                - generic [ref=e1384]: "Apology Letter for Mistake: Format, Samples and Writing Guide for Indian Workplaces and Schools"
+                - generic [ref=e1385]:
+                  - generic [ref=e1386]: Naukri blog
+                  - generic [ref=e1387]: .
+                  - generic [ref=e1388]: 11 May 2026
+              - generic [ref=e1391] [cursor=pointer]:
+                - img "blog-image" [ref=e1392]
+                - generic [ref=e1393]: What is a Stenographer? Meaning, Skills, Qualification & Salary
+                - generic [ref=e1394]:
+                  - generic [ref=e1395]: Naukri blog
+                  - generic [ref=e1396]: .
+                  - generic [ref=e1397]: 11 May 2026
+              - generic [ref=e1400] [cursor=pointer]:
+                - img "blog-image" [ref=e1401]
+                - generic [ref=e1402]: "Sick Leave Application: Format, Tips, and Ready-to-Use Samples for Indian Workplaces"
+                - generic [ref=e1403]:
+                  - generic [ref=e1404]: Naukri blog
+                  - generic [ref=e1405]: .
+                  - generic [ref=e1406]: 11 May 2026
+            - img [ref=e1409] [cursor=pointer]
+      - generic [ref=e1413] [cursor=pointer]:
+        - img "blog-image" [ref=e1414]
+        - generic [ref=e1415]: "Apology Letter for Mistake: Format, Samples and Writing Guide for Indian Workplaces and Schools"
+        - generic [ref=e1416]: How to write an apology letter? Explore a range of sample apologies and a step-by-step guide on writing apology letters.
+        - link "Know more" [ref=e1417]:
+          - /url: /blog/apology-letter-samples-and-tips-to-write-an-apology-letter/?utm_campaign=dashboard_widget&utm_source=naukri&utm_medium=desktop
+  - alert [ref=e1418]
+  - contentinfo [ref=e1419]:
+    - generic [ref=e1422]:
+      - generic [ref=e1423]:
+        - link "Naukri Logo" [ref=e1424] [cursor=pointer]:
+          - /url: https://www.naukri.com
+          - img "Naukri Logo" [ref=e1425]
+        - generic [ref=e1426]:
+          - generic "Connect with us" [ref=e1427]
+          - link "naukri social icons" [ref=e1428] [cursor=pointer]:
+            - /url: https://www.facebook.com/Naukri
+            - img "naukri social icons" [ref=e1429]
+          - link "naukri social icons" [ref=e1430] [cursor=pointer]:
+            - /url: https://instagram.com/naukridotcom/
+            - img "naukri social icons" [ref=e1431]
+          - link "naukri social icons" [ref=e1432] [cursor=pointer]:
+            - /url: https://twitter.com/naukri
+            - img "naukri social icons" [ref=e1433]
+          - link "naukri social icons" [ref=e1434] [cursor=pointer]:
+            - /url: http://www.linkedin.com/company/naukri.com
+            - img "naukri social icons" [ref=e1435]
+      - list [ref=e1437]:
+        - listitem [ref=e1438]:
+          - link "About us" [ref=e1439] [cursor=pointer]:
+            - /url: https://infoedge.in
+        - listitem [ref=e1440]:
+          - link "Careers" [ref=e1441] [cursor=pointer]:
+            - /url: https://careers.infoedge.com/
+        - listitem [ref=e1442]:
+          - link "Employer home" [ref=e1443] [cursor=pointer]:
+            - /url: https://www.naukri.com/recruit/login
+        - listitem [ref=e1444]:
+          - link "Sitemap" [ref=e1445] [cursor=pointer]:
+            - /url: https://www.naukri.com/sitemap/sitemap.php
+        - listitem [ref=e1446]:
+          - link "Credits" [ref=e1447] [cursor=pointer]:
+            - /url: https://www.naukri.com/credits
+      - list [ref=e1449]:
+        - listitem [ref=e1450]:
+          - link "Help center" [ref=e1451] [cursor=pointer]:
+            - /url: https://www.naukri.com/faq/job-seeker?utm_source=footer
+        - listitem [ref=e1452]:
+          - link "Summons/Notices" [ref=e1453] [cursor=pointer]:
+            - /url: https://w5.naukri.com/summons-notices-form/
+        - listitem [ref=e1454]:
+          - link "Grievances" [ref=e1455] [cursor=pointer]:
+            - /url: https://w5.naukri.com/grievances-form/
+        - listitem [ref=e1456]:
+          - link "Report issue" [ref=e1457] [cursor=pointer]:
+            - /url: https://w5.naukri.com/fdbck/main/feedback.php?app_id=15
+      - list [ref=e1459]:
+        - listitem [ref=e1460]:
+          - link "Privacy policy" [ref=e1461] [cursor=pointer]:
+            - /url: https://www.naukri.com/privacypolicy
+        - listitem [ref=e1462]:
+          - link "Terms & conditions" [ref=e1463] [cursor=pointer]:
+            - /url: https://www.naukri.com/termsconditions
+        - listitem [ref=e1464]:
+          - link "Fraud alert" [ref=e1465] [cursor=pointer]:
+            - /url: https://www.naukri.com/imposter/report-fake-job-recruiter
+        - listitem [ref=e1466]:
+          - link "Trust & safety" [ref=e1467] [cursor=pointer]:
+            - /url: https://www.naukri.com/jobsearch/trust-safety
+      - generic [ref=e1468]:
+        - generic [ref=e1469]: Apply on the go
+        - generic [ref=e1470]: Get real-time job updates on our App
+        - generic [ref=e1471]:
+          - link "naukri app download" [ref=e1472] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=naukriApp.appModules.login&hl=en&utm_source=naukri&utm_medium=footer
+            - img "naukri app download" [ref=e1473]
+          - link "naukri app download" [ref=e1474] [cursor=pointer]:
+            - /url: https://itunes.apple.com/in/app/naukri.com-job-search/id482877505?mt=8
+            - img "naukri app download" [ref=e1475]
+    - generic [ref=e1477]:
+      - generic [ref=e1478]:
+        - link "naukri social logos" [ref=e1480] [cursor=pointer]:
+          - /url: http://infoedge.in
+          - img "naukri social logos" [ref=e1481]
+        - generic [ref=e1482]:
+          - generic [ref=e1483]: All trademarks are the property of their respective owners
+          - generic [ref=e1484]: All rights reserved © 2025 Info Edge (India) Ltd.
+      - generic [ref=e1485]: Our businesses
+      - list [ref=e1488]:
+        - listitem [ref=e1489]:
+          - link "nnacres" [ref=e1491] [cursor=pointer]:
+            - /url: https://www.99acres.com/
+            - img "nnacres" [ref=e1492]
+        - listitem [ref=e1493]:
+          - link "jeevansathi" [ref=e1495] [cursor=pointer]:
+            - /url: https://www.jeevansathi.com/
+            - img "jeevansathi" [ref=e1496]
+        - listitem [ref=e1497]:
+          - link "ng" [ref=e1499] [cursor=pointer]:
+            - /url: https://www.naukrigulf.com/
+            - img "ng" [ref=e1500]
+        - listitem [ref=e1501]:
+          - link "shiksha" [ref=e1503] [cursor=pointer]:
+            - /url: https://www.shiksha.com/
+            - img "shiksha" [ref=e1504]
+        - listitem [ref=e1505]:
+          - link "iimjobs" [ref=e1507] [cursor=pointer]:
+            - /url: https://www.iimjobs.com
+            - img "iimjobs" [ref=e1508]
+        - listitem [ref=e1509]:
+          - link "hirist" [ref=e1511] [cursor=pointer]:
+            - /url: https://www.hirist.tech/
+            - img "hirist" [ref=e1512]
+        - listitem [ref=e1513]:
+          - link "jobhai" [ref=e1515] [cursor=pointer]:
+            - /url: https://www.jobhai.com
+            - img "jobhai" [ref=e1516]
+        - listitem [ref=e1517]:
+          - link "doselect" [ref=e1519] [cursor=pointer]:
+            - /url: https://doselect.com/
+            - img "doselect" [ref=e1520]
+        - listitem [ref=e1521]:
+          - link "minis" [ref=e1523] [cursor=pointer]:
+            - /url: https://www.naukri.com/minis
+            - img "minis" [ref=e1524]
+        - listitem [ref=e1525]:
+          - link "codingninjas" [ref=e1527] [cursor=pointer]:
+            - /url: https://www.codingninjas.com/?utm_source=naukri&utm_medium=desktop-footer
+            - img "codingninjas" [ref=e1528]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | import { login } from '../pages/login';
+  3  | import user from '../testdata/user.json';
+  4  | import fs from 'fs';
+  5  | 
+  6  | const authFile = 'auth/user.json';
+  7  | 
+  8  | if (!fs.existsSync('auth')) {
+  9  |   fs.mkdirSync('auth');
+  10 | }
+  11 | 
+  12 | test('login with valid user', async ({ page }) => {
+  13 |   const loginPage = new login(page);
+  14 |   await loginPage.navigate();
+  15 |   await loginPage.login(user.username, user.password);
+> 16 |   await page.waitForURL('/mnjuser/profile');
+     |              ^ Error: page.waitForURL: Test timeout of 30000ms exceeded.
+  17 |   await page.context().storageState({ path: authFile });
+  18 | });
+  19 | 
+```

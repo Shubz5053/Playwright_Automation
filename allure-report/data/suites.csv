@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1","dashboard test","chromium","2026-05-13","skipped","2026-05-13","","dashboard.spec.ts","",""
+"","6468","login with valid user","setup","2026-05-14","passed","2026-05-14","","auth.setup.ts","",""
+"","6955","should update profile successfully","chromium","2026-05-14","passed","2026-05-14","","updateprofile.spec.ts","",""
