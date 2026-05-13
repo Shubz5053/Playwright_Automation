@@ -17,11 +17,14 @@ export class login {
   }
 
   async navigate() {
-    await this.page.goto('/');
+    await this.page.goto('/', { waitUntil: 'networkidle' });
+    await this.page.waitForLoadState('domcontentloaded');
   }
 
   async login(user: string, pass: string) {
+    await this.loginButton.waitFor({ state: 'visible', timeout: 60000 });
     await this.loginButton.click();
+    await this.username.waitFor({ state: 'visible', timeout: 30000 });
     await this.username.fill(user);
     await this.password.fill(pass);
     await this.loginBtn.click();

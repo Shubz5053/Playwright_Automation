@@ -2,6 +2,7 @@
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: 'src/tests',
+  timeout: 60000,
   retries: 2,
   workers: process.env.CI ? 2 : 4,
 
@@ -10,7 +11,9 @@ export default defineConfig({
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    trace: 'on-first-retry'
+    trace: 'on-first-retry',
+    navigationTimeout: 60000,
+    actionTimeout: 30000,
   },
 
   reporter: [
